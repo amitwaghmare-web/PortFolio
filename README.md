@@ -60,7 +60,37 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 - Responsive for all screens  
 - Smooth typography and spacing  
 
+## 📁 Current Project Structure
+```
+/
+/
+├── index.html
+├── style.css
+└── assets/
+      ├── profile.png
+      ├── resume.pdf
+
 ---
+
+
+
+## ✅ Level 4 Completed: Projects Showcase
+
+### ✔ Features Added
+- Modern **Projects Section**
+- Responsive **grid layout** (2–3 cards per row)
+- Project cards with:
+  - Preview image / icon
+  - Title + short description
+  - “View Project” / “GitHub” buttons
+- Smooth hover animations
+- Clean spacing + balanced layout
+- Fully responsive on all screen sizes
+
+### ✔ Improvements
+- Better section padding & alignment  
+- Consistent card shadows and rounded corners  
+- Mobile-friendly stacking layout  
 
 ## 📁 Updated Project Structure
 /
@@ -72,11 +102,6 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 └── README.md
 
 
-
-
-
-
-
 ---
 
 ## 🚀 How to View
@@ -85,7 +110,6 @@ Just open **index.html** in any browser.
 ---
 
 ## 🔜 Next Levels (Will be added later)  
-- Level 4 → Projects  
 - Level 5 → Skills + Certifications  
 - Level 6 → Footer  
 

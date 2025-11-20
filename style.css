@@ -211,7 +211,6 @@ body.light-theme .theme-btn:hover {
 .hero-grid {
     margin-top: 50px;
     display: grid;
-    /* grid-template-columns: 65% 35%; */
     grid-template-columns: 62% 38%;
     align-items: center;
     gap: 50px;
@@ -389,7 +388,7 @@ body.light-theme .theme-btn:hover {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 120px 0;
+    padding: 120px 0px;
 }
 
 .about-container {
@@ -460,17 +459,20 @@ body.light-theme .theme-btn:hover {
    LIGHT THEME FIXES for HERO + ABOUT
 ============================================ */
 body.light-theme .about-container {
-    background: rgba(0, 0, 0, 0.04);  /* subtle grey card */
+    background: rgba(0, 0, 0, 0.04);
+    /* subtle grey card */
     border: 1px solid rgba(0, 0, 0, 0.08);
     color: #1a1a1a;
 }
 
 body.light-theme .about-container p {
-    color: #444; /* readable text */
+    color: #444;
+    /* readable text */
 }
 
 body.light-theme .about-container h2 {
-    color: #0077ff;  /* new accent for light mode */
+    color: #0077ff;
+    /* new accent for light mode */
 }
 
 body.light-theme .about-container h2::after {
@@ -494,4 +496,137 @@ body.light-theme .lead {
     color: #444;
 }
 
+/* ============================================
+   PROJECTS SECTION
+============================================ */
+#projects {
+    padding: 100px 0;
+    text-align: center;
+}
 
+#projects h2 {
+    font-size: 38px;
+    font-family: "Poppins", sans-serif;
+    color: var(--accent);
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* underline */
+#projects h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 4px;
+}
+
+/* GRID */
+.projects-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 28px;
+}
+
+/* CARD (Dark Mode Default) */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 22px;
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.45);
+    transition: transform .25s ease, box-shadow .25s ease, border .25s ease;
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-6px);
+    border: 1px solid var(--accent);
+    box-shadow: 0px 12px 32px rgba(0, 255, 211, 0.1);
+}
+
+/* CARD TEXT */
+.card h3 {
+    margin: 0 0 10px;
+    color: #e9f9f4;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+/* CTA BUTTONS */
+.card-ctas {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.small-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--accent);
+    transition: .25s ease;
+}
+
+.small-btn:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #011;
+}
+
+/* ============================================
+   LIGHT THEME — FIXES
+============================================ */
+body.light-theme #projects h2 {
+    color: #0077ff;
+}
+
+body.light-theme #projects h2::after {
+    background: linear-gradient(90deg, #00c1ff, #0077ff);
+}
+
+/* Light Mode Cards */
+body.light-theme .card {
+    background: #ffffff;
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .card h3 {
+    color: #111;
+}
+
+body.light-theme .card p {
+    color: #444;
+}
+
+body.light-theme .small-btn {
+    background: #eef4ff;
+    border: 1px solid #0077ff55;
+    color: #0077ff;
+}
+
+body.light-theme .small-btn:hover {
+    background: linear-gradient(90deg, #00c1ff, #0077ff);
+    color: #fff;
+}
