@@ -51,7 +51,26 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
       ├── resume.pdf
 
 ```
+## ✅ Level 3 Completed: About Section
 
+### ✔ Features Added
+- **About Me** introduction  
+- Short professional description  
+- Clean 2-column layout (text + image or text-only)  
+- Soft animations / fade effect (optional)  
+- Responsive for all screens  
+- Smooth typography and spacing  
+
+---
+
+## 📁 Updated Project Structure
+/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│ └── profile.png
+└── README.md
 
 
 

@@ -20,7 +20,6 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
     -webkit-font-smoothing: antialiased;
@@ -215,6 +214,7 @@ body.light-theme .theme-btn:hover {
     grid-template-columns: 62% 38%;
     align-items: center;
     gap: 50px;
+    height: 20vh;
 }
 
 .hero-left {
@@ -339,7 +339,7 @@ body.light-theme .theme-btn:hover {
 @media (max-width: 768px) {
     .hero {
         margin-top: 120px;
-        height: auto;
+        max-height: 70vh;
         padding: 60px 0;
     }
 
@@ -378,4 +378,117 @@ body.light-theme .theme-btn:hover {
     }
 
 
+}
+
+/* ===========================
+   ABOUT SECTION (Clean Look)
+=========================== */
+
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 120px 0;
+}
+
+.about-container {
+    width: 80%;
+    max-width: 1800px;
+    text-align: left;
+    padding: 40px 50px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    margin-top: 5rem;
+}
+
+/* Heading */
+.about-container h2 {
+    font-size: 38px;
+    color: var(--accent);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+/* Accent underline */
+.about-container h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 4px;
+}
+
+/* Paragraph */
+.about-container p {
+    margin-top: 25px;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 0;
+    }
+
+    .about-container {
+        width: 90%;
+        padding: 30px;
+        text-align: center;
+        margin-top: 20em;
+    }
+
+    .about-container h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-container p {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   LIGHT THEME FIXES for HERO + ABOUT
+============================================ */
+body.light-theme .about-container {
+    background: rgba(0, 0, 0, 0.04);  /* subtle grey card */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+}
+
+body.light-theme .about-container p {
+    color: #444; /* readable text */
+}
+
+body.light-theme .about-container h2 {
+    color: #0077ff;  /* new accent for light mode */
+}
+
+body.light-theme .about-container h2::after {
+    background: linear-gradient(90deg, #00c1ff, #0077ff);
+}
+
+/* HERO TEXT FIXES */
+body.light-theme .hero-left h2 {
+    color: #444;
+}
+
+body.light-theme .hero-left h1 {
+    color: #222;
+}
+
+body.light-theme #typing {
+    color: #0077ff !important;
+}
+
+body.light-theme .lead {
+    color: #444;
 }
