@@ -57,7 +57,6 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 - **About Me** introduction  
 - Short professional description  
 - Clean 2-column layout (text + image or text-only)  
-- Soft animations / fade effect (optional)  
 - Responsive for all screens  
 - Smooth typography and spacing  
 
@@ -85,8 +84,7 @@ Just open **index.html** in any browser.
 
 ---
 
-## 🔜 Next Levels (Will be added later) 
-- Level 3 → About Section  
+## 🔜 Next Levels (Will be added later)  
 - Level 4 → Projects  
 - Level 5 → Skills + Certifications  
 - Level 6 → Footer  
