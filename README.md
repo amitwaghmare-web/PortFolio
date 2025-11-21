@@ -1,4 +1,4 @@
-# 🌐 Amit Waghmare — Portfolio Website (Level 1)
+# 🌐 Amit Waghmare — Portfolio Website
 
 This is my personal portfolio website built using **HTML**, **CSS**, and **JavaScript**.  
 
