@@ -40,7 +40,7 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 
 ---
 
-## 📁 Current Project Structure
+## 📁 Updated Project Structure
 ```
 /
 /
@@ -60,7 +60,7 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 - Responsive for all screens  
 - Smooth typography and spacing  
 
-## 📁 Current Project Structure
+## 📁 Updated Project Structure
 ```
 /
 /
@@ -104,13 +104,37 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 
 ---
 
+## ✅ Level 5 Completed: Skills + Certifications
+
+### ✔ Features Added
+- Modern **Skills Section** with progress bars
+- Dark + Light mode support
+- Clean, responsive grid layout
+- Smooth skill-fill animations
+- Professional spacing and typography
+- **Certifications Section** with:
+  - Clean listed format
+  - Responsive layout
+  - Improved spacing and alignment
+- Both sections fully responsive on mobile/tablet
+- Color variables aligned with theme toggle
+
+## 📁 Updated Project Structure
+/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│ └── profile.png
+└── README.md
+
+
 ## 🚀 How to View
 Just open **index.html** in any browser.
 
 ---
 
-## 🔜 Next Levels (Will be added later)  
-- Level 5 → Skills + Certifications  
+## 🔜 Next Levels (Will be added later)    
 - Level 6 → Footer  
 
 *(These will be added when completed.)*

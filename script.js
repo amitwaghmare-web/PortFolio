@@ -62,8 +62,22 @@ smoothTyping();
                 });
             }).catch(e => { projectsGrid.innerHTML = `<div class='card'><h3>Error loading projects</h3><p>${e.message}</p></div>` });
 
-        // Small improvement: allow clicking avatar to download profile (optional)
-        document.getElementById('profileImg').addEventListener('click', () => {
-            // open fullsize in new tab
-            window.open(document.getElementById('profileImg').src, '_blank');
+        // SKILL BAR ANIMATION ON SCROLL
+const skillsSection = document.querySelector("#skills");
+const skillFills = document.querySelectorAll(".skill-fill");
+
+let animated = false;
+
+window.addEventListener("scroll", () => {
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (sectionPos < windowHeight - 120 && !animated) {
+        animated = true;
+
+        skillFills.forEach(bar => {
+            let percent = bar.dataset.percent;
+            bar.style.width = percent + "%";
         });
+    }
+});
