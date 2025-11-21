@@ -128,16 +128,28 @@ This is my personal portfolio website built using **HTML**, **CSS**, and **JavaS
 │ └── profile.png
 └── README.md
 
+## ✅ Level 5 Completed: Footer Section
+
+### ✔ Features Added
+- Clean and modern **Footer Section**
+- Copyright text (© Amit Waghmare)
+- Social media icons / links (optional)
+- Smooth hover effects
+- Dark + Light mode compatible
+- Fully responsive layout (mobile-friendly)
+- Proper spacing and padding for balanced UI
+
+## 📁 Updated Project Structure
+/
+├── index.html
+├── style.css
+├── script.js
+├── assets/
+│ └── profile.png
+└── README.md
 
 ## 🚀 How to View
 Just open **index.html** in any browser.
-
----
-
-## 🔜 Next Levels (Will be added later)    
-- Level 6 → Footer  
-
-*(These will be added when completed.)*
 
 ---
 
