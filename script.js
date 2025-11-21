@@ -10,42 +10,46 @@ themeBtn.addEventListener("click", () => {
     themeBtn.textContent = body.classList.contains("light-theme") ? "Dark" : "Light";
 });
 
-const text = "Frontend Developer";
-let idx = 0;
-let typingSpeed = 120;   // typing speed
-let erasingSpeed = 70;   // erase speed
-let delayAfterComplete = 1000; // pause after full text
-let isErasing = false;
+const texts = [
+  "Frontend Developer",
+  "Web Developer",
+  "JavaScript Developer",
+  "UI Developer",
+  "React Developer"
+];
 
-function smoothTyping() {
-    const typingSpan = document.getElementById("typing");
 
-    if (!isErasing) {
-        typingSpan.textContent = text.slice(0, idx);
-        idx++;
+let textIndex = 0;
+let charIndex = 0;
 
-        if (idx > text.length) {
-            isErasing = true;
-            setTimeout(smoothTyping, delayAfterComplete); // pause before erasing
-            return;
-        }
-    } else {
-        typingSpan.textContent = text.slice(0, idx);
-        idx--;
+let typingSpeed = 120;
+let erasingSpeed = 70;
+let delayAfterFullText = 1000;
 
-        if (idx < 0) {
-            isErasing = false;
-            idx = 0;
-        }
-    }
+const typingSpan = document.getElementById("typing");
 
-    setTimeout(
-        smoothTyping,
-        isErasing ? erasingSpeed : typingSpeed
-    );
+function type() {
+  if (charIndex < texts[textIndex].length) {
+    typingSpan.textContent += texts[textIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else {
+    setTimeout(erase, delayAfterFullText);
+  }
 }
 
-smoothTyping();
+function erase() {
+  if (charIndex > 0) {
+    typingSpan.textContent = texts[textIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, erasingSpeed);
+  } else {
+    textIndex = (textIndex + 1) % texts.length; // next text
+    setTimeout(type, 300);
+  }
+}
+
+type();  // start animation
 
       // Fetch GitHub repos (replace USERNAME)
         const GITHUB_USERNAME = 'amitwaghmare-web'; // <-- replace with your github username if different
@@ -81,3 +85,4 @@ window.addEventListener("scroll", () => {
         });
     }
 });
+
